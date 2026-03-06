@@ -10,26 +10,26 @@ public class main {
            mostrarMenuOpciones();
            opcion = leerEntero("Elija el programa a ejecutar: ");
            switch (opcion) {
-               case 1:  numeroDivisible();       break;
-               case 2:  factorialNumero();            break;
-               case 3:  numeroPosNegCero();          break;
-               case 4:  promedioNumeroPar();       break;
-               case 5:  sumaDigitos();   break;
-               case 6:  multiplo7y11();        break;
-               case 7:  divisibleEntre2();       break;
-               case 8:  leerHora();          break;
-               case 9:  numerosRomanos();         break;
-               case 10: leerOpcion2num();       break;
-               case 11:  numMayorMenorDiferencia();       break;
-               case 12:  tablaDivicion();            break;
-               case 13:  cantidadDigitoPar();          break;
-               case 14:  determinarTriangular();       break;
-               case 15:  promedioNumeroNegativo();   break;
-               case 16:  primerosMultiplos6();        break;
-               case 17:  poteciaDe2();       break;
-               case 18:  numeroInvertido();          break;
-               case 19:  sumaParoImpar();         break;
-               case 20: gradosCelsiusFahre();	break;
+               case 1:  numeroDivisible4();      break;
+               case 2:  factorialNumero();       break;
+               case 3:  numeroPosNegCero();      break;
+               case 4:  promedioNumeroPar();     break;
+               case 5:  sumaDigitos();  		 break;
+               case 6:  multiplo7y11();       	 break;
+               case 7:  divisibleEntre3no2();    break;
+               case 8:  leerHora();         	 break;
+               case 9:  numerosRomanos();        break;
+               case 10: leerOpcion2num();  	     break;
+               case 11:  numMayorMenorDiferencia();     break;
+               case 12:  tablaDivicion();				break;
+               case 13:  cantidadDigitoPar();          	break;
+               case 14:  determinarTriangular();    	break;
+               case 15:  promedioNumeroNegativo();		break;
+               case 16:  primerosMultiplos6();			break;
+               case 17:  poteciaDe2();					break;
+               case 18:  numeroInvertido();				break;
+               case 19:  sumaParoImpar();				break;
+               case 20: gradosCelsiusFahre();  			break;  
                case 21:
             	   System.out.println("-Usted ha salido del Programa-"); break;
                default: System.out.println("Opción no válida. Intente de nuevo.");
@@ -88,7 +88,7 @@ public class main {
        }
    }
 	    // Solucion programa 1
-   	public static void numeroDivisible() {
+   	public static void numeroDivisible4() {
 	   System.out.print("Ingrese un numero: ");
 	   int n = sc.nextInt();
 	   int resultado = numeroaDividir(n);
@@ -130,15 +130,9 @@ public class main {
 	    	// Solucion programa 3
 	     public static void numeroPosNegCero() {
 	    	
-	    	         int cantidad = leerCantidad();
+	    	         int cantidad = 10;
 	    	         procesarNumeros(cantidad);
-
-	    	     }
-
-	    	     public static int leerCantidad() {
-	    	         System.out.print("Ingrese la cantidad de números: ");
-	    	         return sc.nextInt();
-	    	     }
+}   
 
 	    	     public static void procesarNumeros(int cantidad) {
 
@@ -170,51 +164,184 @@ public class main {
 	    	         System.out.println("Cantidad de ceros: " + ceros);
 
 	    	     }
-	    	        
-	    	        
-	    	        
+	    	         
+	     // Solucion programa 4
 	     	public static void  promedioNumeroPar() {
-	     		
-	     	}
-	     	
+
+	     		    System.out.print("Ingrese un número: ");
+	     		    int nume = sc.nextInt();
+
+	     		    int suma = 0;
+	     		    int contador = 0;
+
+	     		    for (int i = 1; i <= nume; i ++) {
+
+	     		        if (i % 2 == 0) {
+	     		            suma += i;
+	     		            contador++;
+	     		        }
+	     		    }
+
+	     		    if (contador > 0) {
+	     		        double promedio = (double) suma / contador;
+	     		        System.out.println("El promedio de los pares es: " + promedio);
+	     		    } else {
+	     		        System.out.println("No hay números pares.");
+	     		    }
+	     		}
+	     
+	     	// Solucion programa 5 
            public static void  sumaDigitos() {
-        	   
-           }
-           
+        	   System.out.print("Ingrese un número: ");
+    		    int numer= sc.nextInt();
+    		    int sumar = 0;
+    		    
+    		    for (; numer > 0; numer = numer /10) {
+    		    	        sumar += numer % 10;
+    		    	     
+    		    }
+    		    	    System.out.println("La suma de los dígitos es: " + sumar);
+    		    	    		
+    		    	}
+          //Parte 2
+           // Solucion programa 6
            public static void    multiplo7y11() {
-        	   
+        	   System.out.print("Ingrese un número: ");
+   		    int nu = sc.nextInt(); 
+   		    if ( nu % 7 ==0) {
+   		    	
+   		   System.out.print("El número es multiplo de 7");}
+   		    
+   		    else if (nu % 11 == 0){
+   		    
+   		   System.out.print("El número es multiplo de 11");
+   		   
+   		    } else  {
+  		 	System.out.print("El número no es multiplo de ninguno");
+   		    }
            }
            
-           public static void    divisibleEntre2() {
-        	   
+           //Solucion problema 7 
+           //En este use mucho la logica que use para resolver el programa 1
+           public static void    divisibleEntre3no2() {
+        	   System.out.print("Ingrese un numero: ");
+        	   int numeroo = sc.nextInt();
+        	   int resul = numeroDivisible (numeroo);
+        	 
+        	    System.out.println(" La suma de los numeros divisibles entre 4 es: "+ resul);
+        	    
+        	    sc.close();
+        	}      
+        	    public static int numeroDivisible (int numeroo) {
+        
+        	    System.out.println(" Los numeros divisibles entre 3 pero no entre 2 son: ");
+        	    for (int i=1; i<= numeroo;i++) {
+        	    		if (i % 3== 0 && i % 2 != 0) {
+        	    			  System.out.println(i+ " ");	
+        	    		}
+        	    }    
            }
-           
-           
-           public static void     leerHora() {
-        	   
+           // Solucion programa 8
+           public static void leerHora() {
+        	   System.out.print("Ingrese una hora 0-23");
+        	   int hora = sc.nextInt();
+        	   if (hora >= 0 && hora < 12) {
+        		   System.out.print("Es de Mañana");
+        	   }
+        	   else if (hora >= 12 && hora < 18) {
+        		   System.out.print("Es Tarde");
+        	   } else if (hora >= 18 && hora < 23) {
+        		   System.out.print("Es de noche");
+        	   } else {
+        		   System.out.print("La hora es invalida ");
+        	   }     	   
            }
-           
+      //Parte 3: Uso de switch
+     //Solucion programa 9
            public static void    numerosRomanos() {
-        	   
-           }
-           
-         
+        	   System.out.print("Ingrese un numero del 1 al 5");
+        	   int numer = sc.nextInt();
+        	   switch (numer) {
+        	   case 1:
+        	   System.out.print("I");  		 break;
+        	   case 2:
+            	   System.out.print("II");   break;
+        	   case 3:
+            	   System.out.print("III");   break;
+        	   case 4:
+            	   System.out.print("IV"); 	  break;
+        	   case 5:
+            	   System.out.print("V");  	 break;
+        	   defaul:
+            	   System.out.print("Numero invalido");
+        	   }            
+           }           
+      //Solucion programa 10
            public static void leerOpcion2num() {
-        	   
+        	   double numero1 = leerDouble("Ingrese el primer número: ");
+               double numero2 = leerDouble("Ingrese el segundo número: ");
+               System.out.println("1. Sumar\n2. Restar\n3. Multiplicar");
+               int operacion = leerEntero("Elija una operación: ");
+               switch (operacion) {
+                   case 1: System.out.println("Resultado: " + sumar(numero1, numero2));       break;
+                   case 2: System.out.println("Resultado: " + restar(numero1, numero2));      break;
+                   case 3: System.out.println("Resultado: " + multiplicar(numero1, numero2)); break;               
+                   default:
+                	   System.out.println("Opción inválida.");
+               }
            }
-           
+           public static double sumar(double x, double y)       { return x + y; }
+           public static double restar(double x, double y)      { return x - y; }
+           public static double multiplicar(double x, double y) { return x * y; }
+      //Parte 4
+       //Solucion programa 11
            public static void numMayorMenorDiferencia() {
-        	   
+        	   System.out.print("Ingrese el primero numero");
+        	   int a = sc.nextInt();
+        	   System.out.print("Ingrese el segundo numero");
+        	   int b = sc.nextInt();
+        	   int mayor;
+        	   int menor;
+        	   if (a > b ) {
+        		   mayor= a;
+        		   menor= b;
+        	   } else {
+        		   mayor= b;
+        		   menor= a;
+        	   }
+        	   int diferencia = Math.abs( a-b );
+        	   System.out.println("El numero mayor es:" + mayor);
+        	   System.out.println("El numero menor es:" + menor);
+        	   System.out.println("La diferencia absoluta es:"+ diferencia );
            }
+     //Solucion programa 12
            
            public static void tablaDivicion()  {
-        	   
+        	   int numerodiv = leerEntero("Ingrese un número: ");
+               generarTabla(numerodiv);
            }
-           
-           public static void     cantidadDigitoPar() {
-        	   
+
+           public static void generarTabla(int numerodiv) {
+               for (int i = 1; i <= 10; i++) {
+                   System.out.println(numerodiv  + " / " + i + " = " + (numerodiv / i));
+               }   
            }
-           
+      //Solucion programa 13
+           public static void cantidadDigitoPar() {
+        	   System.out.print("Ingrese un numero");
+        	   int numero = sc.nextInt();
+        	   int contador = 0;
+        	   while (numero > 0) {
+        		   int digito =numero % 10;
+        		   if (digito % 2 == 0) {
+        			   contador ++;
+        		   }
+        		   numero = numero / 10;
+        		   
+           }
+        	   System.out.print("Cantidad de digitos pares " + contador);
+           }
+      //Solucion programa 14
            public static void determinarTriangular() {
         	   
            }
@@ -242,10 +369,9 @@ public class main {
            public static void  gradosCelsiusFahre() {
         	   
            }
-           
-	     
-	    	 }
+   
 	     }
+}
 	     
     
 	    	        
