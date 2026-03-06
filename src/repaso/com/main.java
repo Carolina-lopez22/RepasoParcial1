@@ -448,12 +448,20 @@ public class main {
         	   }
    		    }
            }
+       //Solucion programa 20
            public static void  gradosCelsiusFahre() {
-        	   
-        	   
+               System.out.println("Ingrese la temperatura en Celsius para pasarla a Fahrenheit");
+               	double temp = sc.nextDouble();
+                   System.out.println("Resultado: " + celsiusAFahrenheit(temp) + " °F");
+           
            }
+
+           public static double celsiusAFahrenheit(double a)
+           { return (a * 9.0 / 5) + 32;            
+         }       	   
+       }
    
-	     }
+	    
 
 	     
     
