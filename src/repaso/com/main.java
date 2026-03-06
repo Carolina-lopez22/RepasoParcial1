@@ -433,18 +433,28 @@ public class main {
 
         		    System.out.println("Número invertido: " + invertido);
         		}  
-           }
-           
+        //Solucion programa 19   
            public static void sumaParoImpar()  {
-        	   
+        	   System.out.print("Ingrese un número: ");
+   		    int nume = sc.nextInt();
+   		    int suma = 0;
+   		    
+   		    for (int i = 1; i <= nume; i++) {
+   		    	        suma += i;
+        	   if(suma % 2 == 0) {
+        		   System.out.println("La suma es par ");
+        	   } else {
+        		   System.out.println("La suma es impar ");  
+        	   }
+   		    }
            }
-           
            public static void  gradosCelsiusFahre() {
+        	   
         	   
            }
    
 	     }
-}
+
 	     
     
 	    	        
