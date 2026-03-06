@@ -390,12 +390,19 @@ public class main {
 
         		    }
         		} 
-           // Solucion programa 16
-           
+           // Solucion programa 16          
            public static void    primerosMultiplos6() {
-        	   
+        	   System.out.print("Ingrese un número: ");
+      		    int numer = sc.nextInt(); 
+      		    
+      		    for (int i = 1; i <= numer; i++) {
+      		    	
+      		    	int multiplo = 6 * i;
+      		    	System.out.println(multiplo);
+      		    }
+      		    			
            }
-           
+        //Solucion programa 17   
            public static void poteciaDe2(){
         	   
            }
