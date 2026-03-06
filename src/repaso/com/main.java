@@ -418,7 +418,21 @@ public class main {
      			  }
        //Solucion programa 18     
            public static void     numeroInvertido()  {
-        	   
+        		    System.out.print("Ingrese un número: ");
+        		    int num = sc.nextInt();
+
+        		    int invertido = 0;
+
+        		    while (num > 0) {
+
+        		        int digito = num % 10;
+        		        invertido = invertido * 10 + digito;
+        		        num = num / 10;
+
+        		    }
+
+        		    System.out.println("Número invertido: " + invertido);
+        		}  
            }
            
            public static void sumaParoImpar()  {
