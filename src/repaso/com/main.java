@@ -404,9 +404,19 @@ public class main {
            }
         //Solucion programa 17   
            public static void poteciaDe2(){
-        	   
-           }
-           
+        	   System.out.print("Ingrese un número: ");
+     		    int numero = sc.nextInt();  
+     		    
+     		    while ( numero > 1 )  {
+     			  if (numero % 2 != 0) {
+     				 System.out.print("El numero no es potencia de 2");
+     				 return;
+     			  }
+     			  numero = numero / 2;
+     		    }
+     		   System.out.print("El numero es potencia de 2");
+     			  }
+       //Solucion programa 18     
            public static void     numeroInvertido()  {
         	   
            }
