@@ -359,9 +359,38 @@ public class main {
            
            }
          }
+         //Solucion programa 15
            public static void  promedioNumeroNegativo() {
-        	   
-           }
+
+        		    System.out.print("Ingrese la cantidad de números: ");
+        		    int n = sc.nextInt();
+
+        		    int sumaNegativos = 0;
+        		    int contador = 0;
+
+        		    for (int i = 0; i < n; i++) {
+
+        		        System.out.print("Ingrese un número: ");
+        		        int num = sc.nextInt();
+
+        		        if (num < 0) {
+        		            sumaNegativos += num;
+        		            contador++;
+        		        }
+        		    }
+
+        		    if (contador > 0) {
+
+        		        double promedio = (double) sumaNegativos / contador;
+        		        System.out.println("Promedio de negativos: " + promedio);
+
+        		    } else {
+
+        		        System.out.println("No hay negativos");
+
+        		    }
+        		} 
+           // Solucion programa 16
            
            public static void    primerosMultiplos6() {
         	   
