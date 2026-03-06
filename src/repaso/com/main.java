@@ -109,6 +109,7 @@ public class main {
 	    }
 	    return suma;
 	    }
+	    // Solucion progama 2
 	    public static void factorialNumero() {
 	         int numero = leerEntero("Ingrese un número entero: ");
 	         long resultado = factorial(numero);
@@ -122,10 +123,134 @@ public class main {
 	             return -1;
 	         }
 	         long resultado = 1;
-	         for (int i = 1; i <= n; i++) resultado *= i;
+	         for (int i = 1; i <= n; i++)
+	        	 resultado *= i;
 	         return resultado;
 	     }
+	    	// Solucion programa 3
+	     public static void numeroPosNegCero() {
 	    	
-	    
-	   }
-}
+	    	         int cantidad = leerCantidad();
+	    	         procesarNumeros(cantidad);
+
+	    	     }
+
+	    	     public static int leerCantidad() {
+	    	         System.out.print("Ingrese la cantidad de números: ");
+	    	         return sc.nextInt();
+	    	     }
+
+	    	     public static void procesarNumeros(int cantidad) {
+
+	    	         int positivos = 0;
+	    	         int negativos = 0;
+	    	         int ceros = 0;
+
+	    	         for (int i = 0; i < cantidad; i++) {
+
+	    	             System.out.print("Ingrese un número: ");
+	    	             int num = sc.nextInt();
+
+	    	             if (num > 0) {
+	    	                 positivos++;
+	    	             } else if (num < 0) {
+	    	                 negativos++;
+	    	             } else {
+	    	                 ceros++;
+	    	             }
+	    	         }
+
+	    	         mostrarResultados(positivos, negativos, ceros);
+	    	     }
+
+	    	     public static void mostrarResultados(int positivos, int negativos, int ceros) {
+
+	    	         System.out.println("Cantidad de positivos: " + positivos);
+	    	         System.out.println("Cantidad de negativos: " + negativos);
+	    	         System.out.println("Cantidad de ceros: " + ceros);
+
+	    	     }
+	    	        
+	    	        
+	    	        
+	     	public static void  promedioNumeroPar() {
+	     		
+	     	}
+	     	
+           public static void  sumaDigitos() {
+        	   
+           }
+           
+           public static void    multiplo7y11() {
+        	   
+           }
+           
+           public static void    divisibleEntre2() {
+        	   
+           }
+           
+           
+           public static void     leerHora() {
+        	   
+           }
+           
+           public static void    numerosRomanos() {
+        	   
+           }
+           
+         
+           public static void leerOpcion2num() {
+        	   
+           }
+           
+           public static void numMayorMenorDiferencia() {
+        	   
+           }
+           
+           public static void tablaDivicion()  {
+        	   
+           }
+           
+           public static void     cantidadDigitoPar() {
+        	   
+           }
+           
+           public static void determinarTriangular() {
+        	   
+           }
+           
+           public static void  promedioNumeroNegativo() {
+        	   
+           }
+           
+           public static void    primerosMultiplos6() {
+        	   
+           }
+           
+           public static void poteciaDe2(){
+        	   
+           }
+           
+           public static void     numeroInvertido()  {
+        	   
+           }
+           
+           public static void sumaParoImpar()  {
+        	   
+           }
+           
+           public static void  gradosCelsiusFahre() {
+        	   
+           }
+           
+	     
+	    	 }
+	     }
+	     
+    
+	    	        
+	    	        
+	    	        
+	    	        
+	    	        
+	    	        
