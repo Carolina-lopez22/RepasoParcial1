@@ -343,9 +343,22 @@ public class main {
            }
       //Solucion programa 14
            public static void determinarTriangular() {
+        	   System.out.print("Ingrese un numero");
+        	   int nume = sc.nextInt();  
+        	   int suma = 0;
+        	   int i = 1;
         	   
-           }
+        	   while (suma < nume ) {
+        		   suma += i;
+        		   i++;
+        	   }
+        	   if ( suma == nume) {
+        		   System.out.print("Es un numero triangular");
+        	   }else {
+        		   System.out.print("No es numero triangular");  
            
+           }
+         }
            public static void  promedioNumeroNegativo() {
         	   
            }
