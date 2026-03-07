@@ -88,14 +88,12 @@ public class main {
        }
    }
 	    // Solucion programa 1
-   	public static void numeroDivisible4() {
-	   System.out.print("Ingrese un numero: ");
-	   int n = sc.nextInt();
+   	public static void numeroDivisible4() {	
+	   int n = leerEntero("Ingrese un numero: ");
 	   int resultado = numeroaDividir(n);
 	 
 	    System.out.println(" La suma de los numeros divisibles entre 4 es: "+ resultado);
 	    
-	    sc.close();
 	}
 	       
 	    public static int numeroaDividir(int n) {
@@ -142,9 +140,8 @@ public class main {
 
 	    	         for (int i = 0; i < cantidad; i++) {
 
-	    	             System.out.print("Ingrese un número: ");
-	    	             int num = sc.nextInt();
-
+	    	        	 int num = leerEntero("Ingrese un número: ");
+	    	            
 	    	             if (num > 0) {
 	    	                 positivos++;
 	    	             } else if (num < 0) {
@@ -167,10 +164,8 @@ public class main {
 	    	         
 	     // Solucion programa 4
 	     	public static void  promedioNumeroPar() {
-
-	     		    System.out.print("Ingrese un número: ");
-	     		    int nume = sc.nextInt();
-
+	     		 int nume = leerEntero("Ingrese un número: ");
+	     		    
 	     		    int suma = 0;
 	     		    int contador = 0;
 
@@ -181,7 +176,6 @@ public class main {
 	     		            contador++;
 	     		        }
 	     		    }
-
 	     		    if (contador > 0) {
 	     		        double promedio = (double) suma / contador;
 	     		        System.out.println("El promedio de los pares es: " + promedio);
@@ -192,13 +186,11 @@ public class main {
 	     
 	     	// Solucion programa 5 
            public static void  sumaDigitos() {
-        	   System.out.print("Ingrese un número: ");
-    		    int numer= sc.nextInt();
+        	   int numer = leerEntero("Ingrese un número: ");   		   
     		    int sumar = 0;
     		    
     		    for (; numer > 0; numer = numer /10) {
-    		    	        sumar += numer % 10;
-    		    	     
+    		    	        sumar += numer % 10;  		    	     
     		    }
     		    	    System.out.println("La suma de los dígitos es: " + sumar);
     		    	    		
@@ -206,8 +198,7 @@ public class main {
           //Parte 2
            // Solucion programa 6
            public static void    multiplo7y11() {
-        	   System.out.print("Ingrese un número: ");
-   		    int nu = sc.nextInt(); 
+        	   int nu = leerEntero("Ingrese un número: "); 
    		    if ( nu % 7 ==0) {
    		    	
    		   System.out.print("El número es multiplo de 7");}
@@ -224,27 +215,26 @@ public class main {
            //Solucion problema 7 
            //En este use mucho la logica que use para resolver el programa 1
            public static void    divisibleEntre3no2() {
-        	   System.out.print("Ingrese un numero: ");
-        	   int numeroo = sc.nextInt();
+        	   int numeroo = leerEntero("Ingrese un numero: ");      
         	   int resul = numeroDivisible (numeroo);
         	 
         	    System.out.println(" La suma de los numeros divisibles entre 4 es: "+ resul);
-        	    
-        	    sc.close();
+        	           
         	}      
         	    public static int numeroDivisible (int numeroo) {
         
         	    System.out.println(" Los numeros divisibles entre 3 pero no entre 2 son: ");
         	    for (int i=1; i<= numeroo;i++) {
         	    		if (i % 3== 0 && i % 2 != 0) {
-        	    			  System.out.println(i+ " ");	
+        	    			  System.out.println(i+ " ");	  	
         	    		}
-        	    }    
-           }
+        	    }
+				return numeroo;
+        	    }
            // Solucion programa 8
            public static void leerHora() {
-        	   System.out.print("Ingrese una hora 0-23");
-        	   int hora = sc.nextInt();
+        	   int hora = leerEntero("Ingrese una hora 0-23");
+
         	   if (hora >= 0 && hora < 12) {
         		   System.out.print("Es de Mañana");
         	   }
@@ -259,8 +249,7 @@ public class main {
       //Parte 3: Uso de switch
      //Solucion programa 9
            public static void    numerosRomanos() {
-        	   System.out.print("Ingrese un numero del 1 al 5");
-        	   int numer = sc.nextInt();
+        	   int numer = leerEntero("Ingrese un numero del 1 al 5");        	
         	   switch (numer) {
         	   case 1:
         	   System.out.print("I");  		 break;
@@ -272,8 +261,6 @@ public class main {
             	   System.out.print("IV"); 	  break;
         	   case 5:
             	   System.out.print("V");  	 break;
-        	   defaul:
-            	   System.out.print("Numero invalido");
         	   }            
            }           
       //Solucion programa 10
@@ -296,10 +283,8 @@ public class main {
       //Parte 4
        //Solucion programa 11
            public static void numMayorMenorDiferencia() {
-        	   System.out.print("Ingrese el primero numero");
-        	   int a = sc.nextInt();
-        	   System.out.print("Ingrese el segundo numero");
-        	   int b = sc.nextInt();
+        	   int a = leerEntero("Ingrese el primero numero");       	 
+        	   int b = leerEntero("Ingrese el segundo numero");
         	   int mayor;
         	   int menor;
         	   if (a > b ) {
@@ -328,8 +313,7 @@ public class main {
            }
       //Solucion programa 13
            public static void cantidadDigitoPar() {
-        	   System.out.print("Ingrese un numero");
-        	   int numero = sc.nextInt();
+        	   int numero = leerEntero("Ingrese un numero");       	 
         	   int contador = 0;
         	   while (numero > 0) {
         		   int digito =numero % 10;
@@ -343,8 +327,7 @@ public class main {
            }
       //Solucion programa 14
            public static void determinarTriangular() {
-        	   System.out.print("Ingrese un numero");
-        	   int nume = sc.nextInt();  
+        	   int nume = leerEntero("Ingrese un numero");         
         	   int suma = 0;
         	   int i = 1;
         	   
@@ -362,23 +345,18 @@ public class main {
          //Solucion programa 15
            public static void  promedioNumeroNegativo() {
 
-        		    System.out.print("Ingrese la cantidad de números: ");
-        		    int n = sc.nextInt();
-
+        		 int n = leerEntero("Ingrese la cantidad de números: ");        
         		    int sumaNegativos = 0;
         		    int contador = 0;
 
         		    for (int i = 0; i < n; i++) {
 
-        		        System.out.print("Ingrese un número: ");
-        		        int num = sc.nextInt();
-
+        		    	 int num = leerEntero("Ingrese un número: ");       		      
         		        if (num < 0) {
         		            sumaNegativos += num;
         		            contador++;
         		        }
         		    }
-
         		    if (contador > 0) {
 
         		        double promedio = (double) sumaNegativos / contador;
@@ -392,21 +370,18 @@ public class main {
         		} 
            // Solucion programa 16          
            public static void    primerosMultiplos6() {
-        	   System.out.print("Ingrese un número: ");
-      		    int numer = sc.nextInt(); 
-      		    
+        	   int numer = leerEntero("Ingrese un número: ");
+      		       		    
       		    for (int i = 1; i <= numer; i++) {
       		    	
       		    	int multiplo = 6 * i;
       		    	System.out.println(multiplo);
-      		    }
-      		    			
+      		    }   		    			
            }
         //Solucion programa 17   
            public static void poteciaDe2(){
-        	   System.out.print("Ingrese un número: ");
-     		    int numero = sc.nextInt();  
-     		    
+        	   int numero = leerEntero("Ingrese un número: ");
+     		        		    
      		    while ( numero > 1 )  {
      			  if (numero % 2 != 0) {
      				 System.out.print("El numero no es potencia de 2");
@@ -418,8 +393,7 @@ public class main {
      			  }
        //Solucion programa 18     
            public static void     numeroInvertido()  {
-        		    System.out.print("Ingrese un número: ");
-        		    int num = sc.nextInt();
+        	   int num = leerEntero("Ingrese un número: ");
 
         		    int invertido = 0;
 
@@ -435,8 +409,7 @@ public class main {
         		}  
         //Solucion programa 19   
            public static void sumaParoImpar()  {
-        	   System.out.print("Ingrese un número: ");
-   		    int nume = sc.nextInt();
+        	   int nume = leerEntero("Ingrese un número: ");		
    		    int suma = 0;
    		    
    		    for (int i = 1; i <= nume; i++) {
@@ -450,10 +423,9 @@ public class main {
            }
        //Solucion programa 20
            public static void  gradosCelsiusFahre() {
-               System.out.println("Ingrese la temperatura en Celsius para pasarla a Fahrenheit");
-               	double temp = sc.nextDouble();
-                   System.out.println("Resultado: " + celsiusAFahrenheit(temp) + " °F");
-           
+        	   double temp = leerDouble("Ingrese la temperatura en Celsius para pasarla a Fahrenheit");
+             
+                   System.out.println("Resultado: " + celsiusAFahrenheit(temp) + " °F");           
            }
 
            public static double celsiusAFahrenheit(double a)
