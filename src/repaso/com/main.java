@@ -1,6 +1,6 @@
 package repaso.com;
 import java.util.Scanner;
-public class main {
+public class main { // Main
 	 static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -87,6 +87,7 @@ public class main {
            }
        }
    }
+   
 	    // Solucion programa 1
    	public static void numeroDivisible4() {	
 	   int n = leerEntero("Ingrese un numero: ");
